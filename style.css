@@ -11,8 +11,8 @@ body {
 }
 
 header {
-    /* position: sticky;
-    top: 0; */
+    position: sticky;
+    top: 0;
     display: flex;
     padding: 20px;
     background-color: #fff;
@@ -288,7 +288,6 @@ p {
 }
 
 .team-members img {
-    /* border: 2px solid yellow; */
     width: 300px;
     height: 300px;
     margin: auto 35px;
@@ -308,17 +307,14 @@ p {
 }
 
 .contact{
-     /* border: 2px solid red; */
      padding: 80px;
      text-align: center;
      background-color: #F7F7F7;
-    
 }
 .info{
     display: flex;
 }
  .contact h3{
-    /* border: 2px solid red; */
     color: black;
     font-family: "Dongle-bold";
     font-size: 2.2rem;
@@ -331,7 +327,6 @@ p {
  }
 
  .contact-info .info{
-    /* border: 2px solid black; */
     list-style: none;
     display: flex;
     justify-content: center;
@@ -421,7 +416,7 @@ textarea{
 */
 
 footer{
-    /* border: 2px solid red; */
+
     background-color: #333;
     display: flex;
     justify-content: space-between;
