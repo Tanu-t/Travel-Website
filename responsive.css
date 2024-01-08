@@ -1,0 +1,31 @@
+@media only screen and (max-width: 900px){
+    header {
+       flex-direction: column;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        align-items: center;
+    }
+    .navlist ul {
+       flex-direction: column;
+    }
+   
+}
+@media only screen and (max-width: 530px){
+    .team-members img {
+        width: 250px;
+        height: 250px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width:720px){
+    .info{
+        flex-direction: column;
+    }  
+}
+
+
+
+
+

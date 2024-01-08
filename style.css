@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+
+}
+
+header {
+    /* position: sticky;
+    top: 0; */
+    display: flex;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+}
+
+/* .logo{
+    width: 50%;
+    border: 2px solid red;
+    background-color: pink;
+} */
+
+.logo img {
+    max-width: 20%;
+    margin-left: 20px;
+}
+
+/* .navlist{
+    width: 50%;
+    background-color: yellow;
+    border: 2px solid red;
+} */
+
+.navlist ul {
+    display: flex;
+
+}
+
+.navlist li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.navlist li:last-child {
+    margin-right: 0;
+}
+
+.navlist a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #333;
+    transition: all ease 0.3s;
+}
+
+.navlist a:active{
+ color: #ff7f50;
+}
+.navlist a:hover {
+    color: #ff7f50;
+}
+
+.home {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+
+}
+
+.home-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* background-size: cover; */
+    z-index: -1;
+    /* that's mean the text will show on the images otherwise vice-versa */
+
+}
+
+/* .home-content{
+    border: 2px solid red;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20%;
+margin-top: 50%; 
+} */
+
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.home-content h1,
+h3 {
+    color: #fff;
+}
+
+.home-content p {
+    color: #fff;
+}
+
+.change_content:after {
+    content: ' ';
+    animation: changetext 10s infinite linear;
+    color: #ff7f50;
+}
+
+/* animation ko use karne se phle hume keyframe ko lihkhna padta h */
+
+@keyframes changetext {
+    0% {
+        content: "Darjeeling";
+    }
+
+    20% {
+        content: "Jaipur";
+    }
+
+    35% {
+        content: "Manali";
+    }
+
+    60% {
+        content: "Goa";
+    }
+
+    80% {
+        content: "Kerala";
+    }
+}
+
+.home-content h3 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px black;
+}
+
+.home-content h1 {
+    margin: 20px 0 10px 0;
+    /* top right bottom left */
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-shadow: 2px 1px 5px black;
+}
+
+.home-content p {
+    font-size: 1.4rem;
+    word-spacing: 2px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.home-button {
+    /* border: 2px solid white; */
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
+
+.home-button:hover {
+    background-color: #333;
+    transition: all 0.5s ease;
+    transform: scale(0.9);
+}
+
+.destination {
+    /* border: 2px solid black; */
+    font-size: 1.6rem;
+    font-family: "Roboto-bold";
+    margin: 40px 80px;
+    text-align: center;
+
+}
+
+.destination h2 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+}
+
+.destination-grid {
+    /* border: 2px solid  red; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    grid-gap: 20px;
+}
+
+.destination-items {
+    text-align: left;
+}
+
+.destination-items:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.destination-items h3 {
+    /* border: 2px solid black; */
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.destination-items p {
+    font-size: 1.1rem;
+    font-family: "Roboto";
+    /* line-height: 1; */
+    /* font-weight: lighter; */
+}
+
+.destination-items img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.destination-items h3,
+p {
+    color: black;
+}
+
+.destination-btn{
+    display: inline-block;
+    padding: 12px;
+    margin-top: 20px;
+    /* margin-left: 30%; */
+    background:#ff7f50;
+    /* background-color: salmon; */
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: all .45s ease;
+}
+
+.destination-btn:hover{
+    transform: scale(0.9);
+}
+
+.about h3 {
+    /* border: 2px solid red; */
+    color: black;
+    font-family: "Dongle-bold";
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about {
+    /* border: 2px solid red; */
+    text-align: center;
+    padding: 80px;
+}
+
+.about p {
+    /* border: 2px solid green; */
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.team-details{
+    /* border: 2px solid blue; */
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+   
+}
+
+.team-members img {
+    /* border: 2px solid yellow; */
+    width: 300px;
+    height: 300px;
+    margin: auto 35px;
+}
+
+.team-members img:hover{
+    transform: scale(1.1);
+}
+
+.team-members h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.team-members p {
+    font-size: 1.2rem;
+}
+
+.contact{
+     /* border: 2px solid red; */
+     padding: 80px;
+     text-align: center;
+     background-color: #F7F7F7;
+    
+}
+.info{
+    display: flex;
+}
+ .contact h3{
+    /* border: 2px solid red; */
+    color: black;
+    font-family: "Dongle-bold";
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+ }
+ .contact p{
+    font-family: "Dongle-regular";
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+ }
+
+ .contact-info .info{
+    /* border: 2px solid black; */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    /* justify-content: space-between; */
+ }
+
+ .contact-info li{
+    margin: 0 20px;
+    font-family: "Dongle-regular";
+    font-size: 1.2rem;
+    align-items: center;
+    display: flex;
+    /* font-weight: 100; */
+ }
+
+ .contact-info li a{
+    font-family:"Dongle-regular" ;
+    font-size: 1.2rem;
+ }
+
+.contact-info i{
+
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.contact-info a{
+    font-size: 14px;
+
+    transition: all .45s ease;
+}
+
+.contact-info a:hover{
+    transform: translateY(4px);
+}
+
+.form{
+    border: 2px solid black;
+    width: 100%;
+}
+
+input,textarea{
+    width: 70%;
+    padding: 15px;   /*20px top nd bootom nd L&R/ */
+ margin: 10px 0;       /*10px top nd bootom se nd 0 L&R*/
+ border: none;
+ box-shadow: 0 0 5px rgba(27, 24, 24, 0.1);
+ border-radius: 5px;
+ font-family:"Dongle-regular" ;
+font-size:1.1rem ;
+}
+
+input:hover{
+    border: 2px solid black;
+}
+textarea:hover{
+    border: 2px solid black;
+}
+
+textarea{
+    height: 150px;
+}
+
+.form-button{
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+     letter-spacing: 1px;
+     margin-top: 20px;
+     /* transition: all .45s ease; */
+
+}
+
+/* .form-button:hover{
+    background-color: #333;
+    color: white;
+    transition: all ease 0.3s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+*/
+
+footer{
+    /* border: 2px solid red; */
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+.social-icon a{
+color: #fff;
+font-size: 1.5rem;
+margin-right: 10px;
+}
+
+footer p{
+    font-family: "Dongle-regular";
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.social-icon a:hover{
+color: #ff7f50;
+}
